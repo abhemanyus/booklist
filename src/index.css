@@ -7,7 +7,53 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  max-width: 400px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.navbar {
+  padding: 5px;
+}
+
+.navbar ul {
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.booklist {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.book-detail {
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+.book-detail:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.book-form form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.form-title, .form-author{
+  margin: 0.25rem 0;
+  text-decoration: underline;
+}
+
+.book-form button {
+  margin-top: 0.25rem;
 }
