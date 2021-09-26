@@ -4,8 +4,11 @@ import BookReducer from '../reducers/BookReducer';
 export const BookContext = createContext();
 
 function BookContextProvider(props) {
-  const [books, setBooks] = useReducer(BookReducer, [], () => 
-    JSON.parse(localStorage.getItem('books')));
+  const [books, setBooks] = useReducer(BookReducer, [], () => {
+    const data = JSON.parse(localStorage.getItem('books'));
+    if (data !== null) return data;
+    return [];
+  })
   useEffect(() => {
     localStorage.setItem('books', JSON.stringify(books));
   }, [books]);
